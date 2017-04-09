@@ -1,2 +1,2 @@
 # cse-lagom-scala
-Columbus Scala Lagom Scala Presentation
+Columbus Scala Enthusiasts Lagom Scala Presentation
