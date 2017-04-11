@@ -13,13 +13,19 @@ import play.api.libs.json.{Format, Json}
 trait HelloService extends Service {
 
   /**
-    * Example: curl http://localhost:9000/api/hello/Alice
+    * Example:
+    * curl http://localhost:9000/api/hello/Alice
+    * curl http://localhost:9000/api/hello/Bob
+    * curl http://localhost:9000/api/hello/Bacon
     */
   def hello(id: String): ServiceCall[NotUsed, String]
 
   /**
-    * Example: curl -H "Content-Type: application/json" -X POST -d '{"message":
-    * "Hi"}' http://localhost:9000/api/hello/Alice
+    * Example:
+    * curl -H "Content-Type: application/json" -X POST -d '{"message":"Hi"}' http://localhost:9000/api/hello/Alice
+    * curl -H "Content-Type: application/json" -X POST -d '{"message":"Hello"}' http://localhost:9000/api/hello/Bob
+    * curl -H "Content-Type: application/json" -X POST -d '{"message":"Eat me or drink me"}' http://localhost:9000/api/hello/Alice
+    * curl -H "Content-Type: application/json" -X POST -d '{"message":"What's shakin'"}' http://localhost:9000/api/hello/Bacon
     */
   def useGreeting(id: String): ServiceCall[GreetingMessage, Done]
 

@@ -19,7 +19,6 @@ class HelloServiceSpec extends AsyncWordSpec with Matchers with BeforeAndAfterAl
   override protected def afterAll() = server.stop()
 
   "Hello service" should {
-
     "say hello" in {
       client.hello("Alice").invoke().map { answer =>
         answer should ===("Hello, Alice!")
